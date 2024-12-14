@@ -12,14 +12,14 @@ export default defineComponent({
   name: 'App',
   setup() {
     const message = 'Click the button to change the background gradient!';
-    const color = ref('linear-gradient(45deg, #ff6f61, #6fa3ef)'); // Default gradient color
+    const color = ref('linear-gradient(45deg, #ff6f61, #6fa3ef)');
 
     const changeColor = () => {
-      // Change to a random gradient each time the button is clicked
+      
       color.value = `linear-gradient(45deg, ${randomColor()}, ${randomColor()})`;
     };
 
-    // Helper function to generate random colors
+    
     const randomColor = () => {
       return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
     };
@@ -40,7 +40,7 @@ export default defineComponent({
   background-size: cover;
   background-position: center;
   min-height: 100vh;
-  transition: background-image 0.3s ease; /* Transition for background-image */
+  transition: background-image 0.3s ease;
 }
 
 h1 {
